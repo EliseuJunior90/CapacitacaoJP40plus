@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: projeto-indra-2026-jr
+
+  jpa:
+
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+  datasource:
+    url: ${URL_DB:jdbc:oracle:thin:@localhost:1521:XE}
+    username: ${USERNAME_DB:system}
+    password: ${PASSWORD_DB:asderredsa90}
+    driverClassName: oracle.jdbc.OracleDriver
+
+server:
+  port: 9090
