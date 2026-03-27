@@ -20,7 +20,7 @@ public class CategoriasService {
         return null;
     }
 
-    public Categorias save(Categorias categorias) {
+    public Categorias salcarCategoria (Categorias categorias) {
         if (categoriasRepository.existsByNome(categorias.getNome())) {
             throw new RuntimeException("Categoria já existe");
         }

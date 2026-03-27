@@ -48,7 +48,7 @@ public class ProdutosService {
         produtosRepository.delete(produto);
     }
 
-    public void atualizarProdutoPorId (Long id, Produtos produtos) {
+    public Produtos atualizarProdutoPorId (Long id, Produtos produtos) {
         Produtos produtoEntity = produtosRepository.findById(id).orElseThrow(() ->
             new RuntimeException("Produto não encontrado"));
 
@@ -67,6 +67,7 @@ public class ProdutosService {
             .build();
 
         produtosRepository.saveAndFlush(produtoAtualizado);
+        return produtoEntity;
     }
 
 
